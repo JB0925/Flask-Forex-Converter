@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="results">
+        <h1>Here are your results:</h1>
+        <h3>Converted From: {{results['from']}}</h3>
+        <h3>Converted To: {{results['to']}}</h3>
+        <h3>Amount Converted: {{results['amount']}} {{results['from']}}</h3>
+        <h3>Converted Amount: {{results['symbol']}} {{results['converted']}}</h3>
+        <button><a href="/">OK</a></button>
+    </div>
+{% endblock %}
