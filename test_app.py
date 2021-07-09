@@ -1,4 +1,7 @@
 from unittest import TestCase
+
+from flask import session
+
 import app
 
 
@@ -25,6 +28,7 @@ class TestCurrencyConverter(TestCase):
             
             resp = client.post('/', data=data)
             self.assertEqual(resp.status_code, 302)
+            self.assertEqual(session['converted'], 1.93)
             
     
 
